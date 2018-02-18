@@ -14,6 +14,10 @@
 		6162ACAA20388E8800618F78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6162ACA920388E8800618F78 /* main.m */; };
 		6162ACB520388E8800618F78 /* LaserPointerServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6162ACB420388E8800618F78 /* LaserPointerServerTests.m */; };
 		6162ACC020388E8800618F78 /* LaserPointerServerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6162ACBF20388E8800618F78 /* LaserPointerServerUITests.m */; };
+		6162ACCF20388F0500618F78 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6162ACCE20388F0500618F78 /* CustomView.m */; };
+		6162ACD220388F8900618F78 /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 6162ACD120388F8900618F78 /* CustomWindow.m */; };
+		6162ACD82038993000618F78 /* IOBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6162ACD62038993000618F78 /* IOBluetooth.framework */; };
+		6162ACD92038993000618F78 /* IOBluetoothUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6162ACD72038993000618F78 /* IOBluetoothUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,13 @@
 		6162ACBB20388E8800618F78 /* LaserPointerServerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LaserPointerServerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6162ACBF20388E8800618F78 /* LaserPointerServerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaserPointerServerUITests.m; sourceTree = "<group>"; };
 		6162ACC120388E8800618F78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6162ACCD20388F0500618F78 /* CustomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
+		6162ACCE20388F0500618F78 /* CustomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomView.m; sourceTree = "<group>"; };
+		6162ACD020388F8900618F78 /* CustomWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomWindow.h; sourceTree = "<group>"; };
+		6162ACD120388F8900618F78 /* CustomWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomWindow.m; sourceTree = "<group>"; };
+		6162ACD42038925D00618F78 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		6162ACD62038993000618F78 /* IOBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetooth.framework; path = System/Library/Frameworks/IOBluetooth.framework; sourceTree = SDKROOT; };
+		6162ACD72038993000618F78 /* IOBluetoothUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOBluetoothUI.framework; path = System/Library/Frameworks/IOBluetoothUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6162ACD82038993000618F78 /* IOBluetooth.framework in Frameworks */,
+				6162ACD92038993000618F78 /* IOBluetoothUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +97,7 @@
 				6162ACB320388E8800618F78 /* LaserPointerServerTests */,
 				6162ACBE20388E8800618F78 /* LaserPointerServerUITests */,
 				6162AC9B20388E8800618F78 /* Products */,
+				6162ACD32038925D00618F78 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +123,10 @@
 				6162ACA820388E8800618F78 /* Info.plist */,
 				6162ACA920388E8800618F78 /* main.m */,
 				6162ACAB20388E8800618F78 /* LaserPointerServer.entitlements */,
+				6162ACCD20388F0500618F78 /* CustomView.h */,
+				6162ACCE20388F0500618F78 /* CustomView.m */,
+				6162ACD020388F8900618F78 /* CustomWindow.h */,
+				6162ACD120388F8900618F78 /* CustomWindow.m */,
 			);
 			path = LaserPointerServer;
 			sourceTree = "<group>";
@@ -129,6 +147,16 @@
 				6162ACC120388E8800618F78 /* Info.plist */,
 			);
 			path = LaserPointerServerUITests;
+			sourceTree = "<group>";
+		};
+		6162ACD32038925D00618F78 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6162ACD62038993000618F78 /* IOBluetooth.framework */,
+				6162ACD72038993000618F78 /* IOBluetoothUI.framework */,
+				6162ACD42038925D00618F78 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +291,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6162ACD220388F8900618F78 /* CustomWindow.m in Sources */,
 				6162ACA220388E8800618F78 /* ViewController.m in Sources */,
+				6162ACCF20388F0500618F78 /* CustomView.m in Sources */,
 				6162ACAA20388E8800618F78 /* main.m in Sources */,
 				6162AC9F20388E8800618F78 /* AppDelegate.m in Sources */,
 			);
