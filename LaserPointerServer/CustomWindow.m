@@ -68,5 +68,11 @@
     [self setFrameOrigin:newOrigin];
 }
 
+- (NSTimeInterval)animationResizeTime:(NSRect)newFrame
+{
+    return 0.05;
+}
+
+
 
 @end
