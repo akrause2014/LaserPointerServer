@@ -71,7 +71,6 @@ NSString * const TRANSFER_CHARACTERISTIC_UUID = @"4C0FA8BE-45C9-4D8A-B529-CCCF5E
 //    NSLog(@"Coordinates: (%f, %f)", x, y);
     
     NSWindow *window = [[[NSApplication sharedApplication]windows]firstObject];
-    NSLog(@"%@", [[[NSApplication sharedApplication]windows]firstObject]);
     NSRect windowFrame = [window frame];
     NSPoint newOrigin = windowFrame.origin;
     newOrigin.x = fmax(0, fmin(screenVisibleFrame.size.width-windowFrame.size.width, x));
